@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDIO MY - Treino de Resultados</title>
+    <title>STUDIO MV - Treino de Resultados</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #000000;
             --secondary: #ff3366;
+            --accent: #6a11cb;
             --light: #f8f9fa;
             --dark: #212529;
             --gray: #6c757d;
@@ -25,824 +26,423 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://studiomvtreinoderesultados.my.canva.site/_assets/media/7b46a56c859c7f9d2a7b8f1b476a2af1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
 
         .container {
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--secondary);
-            color: white;
-            border: none;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .btn:hover {
-            background: #e62e5c;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 51, 102, 0.2);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--secondary);
-            color: var(--secondary);
-        }
-
-        .btn-outline:hover {
-            background: var(--secondary);
-            color: white;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 3px;
-            background: var(--secondary);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
         }
 
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .header-image {
             width: 100%;
-            z-index: 1000;
+            height: 120px;
+            background: url('https://studiomvtreinoderesultados.my.canva.site/_assets/media/4b9aad705b49b6d8ca0a2886d53decf1.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 15px 15px 0 0;
+            margin-bottom: -10px;
+            position: relative;
+        }
+
+        .profile-card {
             background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
             transition: var(--transition);
+            color: var(--dark);
         }
 
-        header.scrolled {
-            background: white;
-            padding: 10px 0;
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
         }
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
+        .logo-container {
+            margin-top: -70px;
+            margin-bottom: 20px;
         }
 
         .logo {
-            font-size: 1.8rem;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Removemos qualquer fundo ou borda para a logo transparente */
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+            max-height: 140px;
+            object-fit: contain;
+            /* Removemos qualquer borda ou sombra da imagem */
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .logo-text {
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--primary);
+            margin-bottom: 5px;
         }
 
-        .logo span {
+        .logo-text span {
             color: var(--secondary);
         }
 
-        nav ul {
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 30px;
-        }
-
-        nav ul li a {
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 20px;
             font-weight: 500;
-            transition: var(--transition);
-            position: relative;
         }
 
-        nav ul li a:hover {
-            color: var(--secondary);
+        .bio {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
 
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            bottom: -5px;
-            left: 0;
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        /* Services Section */
-        .services {
-            background: var(--light);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            text-align: center;
-            padding: 40px 30px;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        /* Portfolio Section */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .portfolio-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 300px;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+        .links-container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: var(--transition);
-            padding: 20px;
-            text-align: center;
-            color: white;
+            gap: 15px;
+            width: 100%;
         }
 
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .portfolio-overlay h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            transform: translateY(20px);
-            transition: var(--transition);
-        }
-
-        .portfolio-overlay p {
-            transform: translateY(20px);
-            transition: var(--transition);
-            transition-delay: 0.1s;
-        }
-
-        .portfolio-item:hover .portfolio-overlay h3,
-        .portfolio-item:hover .portfolio-overlay p {
-            transform: translateY(0);
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--light);
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-        }
-
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            margin-bottom: 30px;
-        }
-
-        .contact-details {
-            margin-bottom: 30px;
-        }
-
-        .contact-detail {
+        .link-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 18px 20px;
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            text-decoration: none;
+            color: var(--dark);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
 
-        .contact-detail i {
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: var(--transition);
+        }
+
+        .link-card:hover::before {
+            left: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background: white;
+        }
+
+        .link-icon {
             width: 40px;
             height: 40px;
-            background: var(--secondary);
-            color: white;
-            border-radius: 50%;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 15px;
+            font-size: 1.2rem;
+            color: white;
         }
 
-        .contact-form .form-group {
-            margin-bottom: 20px;
+        .link-icon.instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
         }
 
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Montserrat', sans-serif;
+        .link-icon.portfolio {
+            background: linear-gradient(45deg, #00C2FF, #00D4FF);
+        }
+
+        .link-icon.whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+        }
+
+        .link-icon.store {
+            background: linear-gradient(45deg, #FF9900, #FF6600);
+        }
+
+        .link-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .link-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .link-description {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        .link-arrow {
+            color: var(--gray);
+            font-size: 0.9rem;
             transition: var(--transition);
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--secondary);
-        }
-
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 60px 0 30px;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background: var(--secondary);
-            bottom: 0;
-            left: 0;
-        }
-
-        .footer-col p {
-            margin-bottom: 20px;
-            opacity: 0.8;
+        .link-card:hover .link-arrow {
+            transform: translateX(5px);
+            color: var(--secondary);
         }
 
         .social-links {
             display: flex;
+            justify-content: center;
             gap: 15px;
+            margin-top: 30px;
         }
 
-        .social-links a {
+        .social-link {
             width: 40px;
             height: 40px;
-            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
+            background: white;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--dark);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
 
-        .social-links a:hover {
-            background: var(--secondary);
+        .social-link:hover {
             transform: translateY(-3px);
-        }
-
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-col ul li a {
-            opacity: 0.8;
-            transition: var(--transition);
-        }
-
-        .footer-col ul li a:hover {
-            opacity: 1;
             color: var(--secondary);
-            padding-left: 5px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .copyright {
+        .footer-image {
+            width: 100%;
+            height: 80px;
+            background: url('https://studiomvtreinoderesultados.my.canva.site/_assets/media/4b9aad705b49b6d8ca0a2886d53decf1.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 0 0 15px 15px;
+            margin-top: -10px;
+            position: relative;
+        }
+
+        footer {
+            margin-top: 40px;
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.8rem;
+        }
+
+        .watermark {
+            margin-top: 10px;
             opacity: 0.7;
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.8rem;
+        /* Animação de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            nav {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background: white;
-                transition: var(--transition);
-                padding: 30px;
-            }
-
-            nav.active {
-                left: 0;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 0 0 20px 0;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 250px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        @media (max-width: 576px) {
-            .hero h1 {
+        .profile-card, .link-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .link-card:nth-child(1) { animation-delay: 0.1s; }
+        .link-card:nth-child(2) { animation-delay: 0.2s; }
+        .link-card:nth-child(3) { animation-delay: 0.3s; }
+        .link-card:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            .profile-card {
+                padding: 20px;
+            }
+            
+            .logo-text {
                 font-size: 1.8rem;
             }
             
-            .section-title h2 {
-                font-size: 1.8rem;
+            .link-card {
+                padding: 15px;
             }
             
-            section {
-                padding: 60px 0;
+            .header-image, .footer-image {
+                height: 80px;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .logo img {
+                max-height: 120px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">STUDIO <span>MY</span></a>
-            
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+    <div class="container">
+        <!-- Header Image -->
+        <div class="header-image"></div>
+        
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="logo-container">
+                <div class="logo">
+                    <!-- Substitua pela sua logo PNG transparente -->
+                    <img src="logo.png" alt="STUDIO MY Logo">
+                </div>
             </div>
             
-            <nav id="nav">
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contact">Contate-nos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>TREINO DE RESULTADOS</h1>
-                <p>Transformamos vidas através do esporte. Oferecemos treinamento personalizado, equipamentos de alta qualidade e uma comunidade motivadora para você alcançar seus objetivos.</p>
-                <div class="hero-btns">
-                    <a href="#services" class="btn">Conheça Nossos Serviços</a>
-                    <a href="#contact" class="btn btn-outline">Entre em Contato</a>
-                </div>
+            <h1 class="logo-text">STUDIO <span>MV</span></h1>
+            <p class="tagline">TREINO DE RESULTADOS</p>
+            <p class="bio">Especialistas em corrida e treinamento esportivo. Oferecemos serviços personalizados e equipamentos de alta qualidade para maximizar seu desempenho.</p>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/corridasstudiomv/?igsh=aGdsOHNyOGc4eHMy" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.instagram.com/lojastudiomv/?igsh=NjZ2c2kwZ3oyeGts" class="social-link">
+                    <i class="fas fa-store"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=5585991976215&text=Ol%C3%A1%2C+gostaria+de+adquirir+um+produto+da+Loja&type=phone_number&app_absent=0" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nossos Serviços</h2>
-                <p>Oferecemos soluções completas para sua performance esportiva</p>
-            </div>
+        
+        <!-- Links Container -->
+        <div class="links-container">
+            <!-- Corridas Studio MV -->
+            <a href="https://www.instagram.com/corridasstudiomv/?igsh=aGdsOHNyOGc4eHMy" class="link-card" target="_blank">
+                <div class="link-icon instagram">
+                    <i class="fas fa-running"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Corridas Studio MV</div>
+                    <div class="link-description">Treinamento especializado para corrida</div>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <h3>Corridas Studio MV</h3>
-                    <p>Treinamento especializado para corrida, com planos personalizados e acompanhamento de performance.</p>
-                    <a href="https://www.instagram.com/corridasstudiomv/?igsh=aGdsOHNyOGc4eHMy" class="btn btn-outline" style="margin-top: 20px;">Saiba Mais</a>
+            <!-- Loja Studio MV -->
+            <a href="https://www.instagram.com/lojastudiomv/?igsh=NjZ2c2kwZ3oyeGts" class="link-card" target="_blank">
+                <div class="link-icon store">
+                    <i class="fas fa-shopping-bag"></i>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3>Loja Studio MV</h3>
-                    <p>Equipamentos e acessórios de alta qualidade para otimizar seu desempenho esportivo.</p>
-                    <a href="https://www.instagram.com/lojastudiomv/?igsh=NjZ2c2kwZ3oyeGts" class="btn btn-outline" style="margin-top: 20px;">Visitar Loja</a>
+                <div class="link-content">
+                    <div class="link-title">Loja Studio MV</div>
+                    <div class="link-description">Equipamentos e acessórios esportivos</div>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3>Treino Personalizado</h3>
-                    <p>Programas de treino individualizados para atender seus objetivos específicos.</p>
-                    <a href="#contact" class="btn btn-outline" style="margin-top: 20px;">Agendar Avaliação</a>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
                 </div>
-            </div>
+            </a>
+            
+            <!-- Portfolio -->
+            <a href="https://www.canva.com/design/DAGxUFcXC5s/OMz7ukLnynxMRfWRMpavSg/view" class="link-card" target="_blank">
+                <div class="link-icon portfolio">
+                    <i class="fas fa-images"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Portfólio</div>
+                    <div class="link-description">Conheça nossos trabalhos e resultados</div>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+            
+            <!-- Contate-nos -->
+            <a href="https://api.whatsapp.com/send/?phone=5585991976215&text=Ol%C3%A1%2C+gostaria+de+adquirir+um+produto+da+Loja&type=phone_number&app_absent=0" class="link-card" target="_blank">
+                <div class="link-icon whatsapp">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Contate-nos</div>
+                    <div class="link-description">Fale conosco via WhatsApp</div>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
         </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Portfólio</h2>
-                <p>Conheça alguns dos nossos trabalhos e resultados alcançados</p>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Treino de Corrida">
-                    <div class="portfolio-overlay">
-                        <h3>Treino de Corrida</h3>
-                        <p>Programas personalizados para todos os níveis</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Equipamentos Esportivos">
-                    <div class="portfolio-overlay">
-                        <h3>Equipamentos Esportivos</h3>
-                        <p>Produtos de alta qualidade para melhor performance</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Resultados Alcançados">
-                    <div class="portfolio-overlay">
-                        <h3>Resultados Alcançados</h3>
-                        <p>Histórias de sucesso dos nossos clientes</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://www.canva.com/design/DAGxUFcXC5s/OMz7ukLnynxMRfWRMpavSg/view" class="btn">Ver Portfólio Completo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contate-nos</h2>
-                <p>Entre em contato para agendar uma avaliação ou tirar suas dúvidas</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Vamos Conversar</h3>
-                    <p>Estamos prontos para ajudar você a alcançar seus objetivos. Entre em contato conosco através dos canais abaixo.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Telefone</h4>
-                                <p>(85) 99197-6215</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-detail">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>E-mail</h4>
-                                <p>contato@studiomy.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Localização</h4>
-                                <p>Fortaleza, CE</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/corridasstudiomv/?igsh=aGdsOHNyOGc4eHMy"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.instagram.com/lojastudiomv/?igsh=NjZ2c2kwZ3oyeGts"><i class="fas fa-store"></i></a>
-                        <a href="https://api.whatsapp.com/send/?phone=5585991976215&text=Ol%C3%A1%2C+gostaria+de+adquirir+um+produto+da+Loja&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="form-contato">
-                        <div class="form-group">
-                            <input type="text" placeholder="Seu Nome" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" placeholder="Seu E-mail" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="text" placeholder="Assunto" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea placeholder="Sua Mensagem" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>STUDIO MY</h3>
-                    <p>Transformamos vidas através do esporte com treinamento personalizado e equipamentos de alta qualidade.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/corridasstudiomv/?igsh=aGdsOHNyOGc4eHMy"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.instagram.com/lojastudiomv/?igsh=NjZ2c2kwZ3oyeGts"><i class="fas fa-store"></i></a>
-                        <a href="https://api.whatsapp.com/send/?phone=5585991976215&text=Ol%C3%A1%2C+gostaria+de+adquirir+um+produto+da+Loja&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Nossos Serviços</h3>
-                    <ul>
-                        <li><a href="https://www.instagram.com/corridasstudiomv/?igsh=aGdsOHNyOGc4eHMy">Corridas Studio MV</a></li>
-                        <li><a href="https://www.instagram.com/lojastudiomv/?igsh=NjZ2c2kwZ3oyeGts">Loja Studio MV</a></li>
-                        <li><a href="#contact">Treino Personalizado</a></li>
-                        <li><a href="https://www.canva.com/design/DAGxUFcXC5s/OMz7ukLnynxMRfWRMpavSg/view">Portfólio Completo</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 STUDIO MY. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+        
+        <!-- Footer Image -->
+        <div class="footer-image"></div>
+        
+        <footer>
+            <p>© 2023 STUDIO MY. Todos os direitos reservados.</p>
+            <p class="watermark">Desenvolvido com ❤️ para resultados esportivos</p>
+        </footer>
+    </div>
 
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.getElementById('nav');
+        // Efeito de digitação para o slogan
+        const tagline = document.querySelector('.tagline');
+        const text = tagline.textContent;
+        tagline.textContent = '';
         
-        mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
-            mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
-                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
-            });
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                tagline.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
             }
-        });
+        }
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // Inicia a animação após um breve delay
+        setTimeout(typeWriter, 500);
         
-        // Form submission
-        document.getElementById('form-contato').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            this.reset();
-        });
-        
-        // Simple animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.querySelectorAll('.service-card, .portfolio-item, .contact-info, .contact-form').forEach(el => {
-            el.style.opacity = 0;
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(el);
+        // Efeito parallax suave no scroll
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const background = document.querySelector('body');
+            background.style.backgroundPosition = 'center ' + (scrolled * 0.5) + 'px';
         });
     </script>
 </body>
